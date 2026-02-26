@@ -1,5 +1,9 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
+<<<<<<< HEAD
 import { SimulatorLayout } from '@/components/simulator/SimulatorLayout';
+=======
+import { AppLayout } from '@/components/layout/AppLayout';
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 
@@ -62,9 +66,16 @@ export default function GradientDescentSim() {
   }
 
   return (
+<<<<<<< HEAD
     <SimulatorLayout topicId="gradient-descent" topicName="Gradient Descent">
       <h1 className="text-2xl font-bold font-display mb-1 text-foreground">Gradient Descent</h1>
       <p className="text-muted-foreground text-sm mb-6">Watch the dot descend f(w) = w² toward the minimum.</p>
+=======
+    <AppLayout>
+      <div className="container mx-auto px-4 py-8 max-w-5xl">
+        <h1 className="text-2xl font-bold font-display mb-1 text-foreground">Gradient Descent</h1>
+        <p className="text-muted-foreground text-sm mb-6">Watch the dot descend f(w) = w² toward the minimum.</p>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-card border border-border rounded-xl p-4">
@@ -109,7 +120,13 @@ export default function GradientDescentSim() {
               <Button onClick={step} variant="outline" className="w-full mt-2" size="sm">Step</Button>
             </div>
           </div>
+<<<<<<< HEAD
       </div>
     </SimulatorLayout>
+=======
+        </div>
+      </div>
+    </AppLayout>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
   );
 }

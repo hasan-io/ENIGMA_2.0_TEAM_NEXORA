@@ -14,6 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
+<<<<<<< HEAD
       mentor_interactions: {
         Row: {
           created_at: string
@@ -38,6 +39,8 @@ export type Database = {
         }
         Relationships: []
       }
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
       profiles: {
         Row: {
           created_at: string

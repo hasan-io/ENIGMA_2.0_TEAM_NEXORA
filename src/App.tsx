@@ -21,12 +21,15 @@ import GradientDescentSim from "./pages/simulators/GradientDescentSim";
 import FeatureScalingSim from "./pages/simulators/FeatureScalingSim";
 import ConfusionMatrixSim from "./pages/simulators/ConfusionMatrixSim";
 import ROCCurveSim from "./pages/simulators/ROCCurveSim";
+<<<<<<< HEAD
 import LassoRegressionSim from "./pages/simulators/LassoRegressionSim";
 import RidgeRegressionSim from "./pages/simulators/RidgeRegressionSim";
 import DecisionTreeSim from "./pages/simulators/DecisionTreeSim";
 import HierarchicalClusteringSim from "./pages/simulators/HierarchicalClusteringSim";
 import PrecisionRecallSim from "./pages/simulators/PrecisionRecallSim";
 import LearningCurvesSim from "./pages/simulators/LearningCurvesSim";
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
 const queryClient = new QueryClient();
 
@@ -54,12 +57,15 @@ const App = () => (
             <Route path="/simulations/feature-scaling" element={<FeatureScalingSim />} />
             <Route path="/simulations/confusion-matrix" element={<ConfusionMatrixSim />} />
             <Route path="/simulations/roc-curve" element={<ROCCurveSim />} />
+<<<<<<< HEAD
             <Route path="/simulations/lasso-regression" element={<LassoRegressionSim />} />
             <Route path="/simulations/ridge-regression" element={<RidgeRegressionSim />} />
             <Route path="/simulations/decision-tree" element={<DecisionTreeSim />} />
             <Route path="/simulations/hierarchical-clustering" element={<HierarchicalClusteringSim />} />
             <Route path="/simulations/precision-recall" element={<PrecisionRecallSim />} />
             <Route path="/simulations/learning-curves" element={<LearningCurvesSim />} />
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

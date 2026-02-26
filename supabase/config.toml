@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 project_id = "kezsrqlxxkcpdblaqeir"
 
 [functions.ai-mentor]
 verify_jwt = false
+=======
+project_id = "kezsrqlxxkcpdblaqeir"
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f

@@ -1,5 +1,9 @@
 import { useState, useMemo } from 'react';
+<<<<<<< HEAD
 import { SimulatorLayout } from '@/components/simulator/SimulatorLayout';
+=======
+import { AppLayout } from '@/components/layout/AppLayout';
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 import { Switch } from '@/components/ui/switch';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
@@ -32,9 +36,16 @@ export default function FeatureScalingSim() {
   }, [useStandardization]);
 
   return (
+<<<<<<< HEAD
     <SimulatorLayout topicId="feature-scaling" topicName="Feature Scaling">
       <h1 className="text-2xl font-bold font-display mb-1 text-foreground">Feature Scaling</h1>
       <p className="text-muted-foreground text-sm mb-6">Toggle between normalization and standardization.</p>
+=======
+    <AppLayout>
+      <div className="container mx-auto px-4 py-8 max-w-5xl">
+        <h1 className="text-2xl font-bold font-display mb-1 text-foreground">Feature Scaling</h1>
+        <p className="text-muted-foreground text-sm mb-6">Toggle between normalization and standardization.</p>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
@@ -102,7 +113,13 @@ export default function FeatureScalingSim() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
       </div>
     </SimulatorLayout>
+=======
+        </div>
+      </div>
+    </AppLayout>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
   );
 }

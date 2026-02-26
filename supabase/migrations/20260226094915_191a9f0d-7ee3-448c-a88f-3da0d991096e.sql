@@ -42,6 +42,10 @@ CREATE TABLE public.user_progress (
   UNIQUE(user_id, topic_name)
 );
 
+<<<<<<< HEAD
+=======
+--altering table --
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 ALTER TABLE public.user_progress ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Users can view their own progress" ON public.user_progress FOR SELECT USING (auth.uid() = user_id);

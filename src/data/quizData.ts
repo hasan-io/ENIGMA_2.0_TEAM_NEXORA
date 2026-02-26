@@ -43,6 +43,7 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+<<<<<<< HEAD
     topicId: 'lasso-regression',
     topicName: 'Lasso Regression',
     domainName: 'Models',
@@ -73,6 +74,8 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
     topicId: 'logistic-regression',
     topicName: 'Logistic Regression',
     domainName: 'Models',
@@ -103,6 +106,7 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+<<<<<<< HEAD
     topicId: 'decision-tree',
     topicName: 'Decision Tree',
     domainName: 'Models',
@@ -118,6 +122,8 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
     topicId: 'kmeans',
     topicName: 'K-Means Clustering',
     domainName: 'Models',
@@ -133,6 +139,7 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+<<<<<<< HEAD
     topicId: 'hierarchical-clustering',
     topicName: 'Hierarchical Clustering',
     domainName: 'Models',
@@ -148,6 +155,8 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
     topicId: 'confusion-matrix',
     topicName: 'Confusion Matrix',
     domainName: 'Evaluation',
@@ -178,6 +187,7 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+<<<<<<< HEAD
     topicId: 'precision-recall',
     topicName: 'Precision-Recall Curve',
     domainName: 'Evaluation',
@@ -208,6 +218,8 @@ export const quizzes: TopicQuiz[] = [
     ],
   },
   {
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
     topicId: 'gradient-descent',
     topicName: 'Gradient Descent',
     domainName: 'Optimization',

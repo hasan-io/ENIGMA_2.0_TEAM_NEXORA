@@ -6,12 +6,19 @@ import { domains } from '@/data/topics';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Award, TrendingUp, TrendingDown } from 'lucide-react';
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
 interface DomainProgress {
   domain: string;
   progress: number;
+<<<<<<< HEAD
   topicScores: { topic: string; percentage: number; bestScore: number; lastScore: number }[];
+=======
+  topicScores: { topic: string; percentage: number }[];
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 }
 
 function ProgressCircle({ value, label, size = 120 }: { value: number; label: string; size?: number }) {
@@ -20,6 +27,7 @@ function ProgressCircle({ value, label, size = 120 }: { value: number; label: st
   const offset = circumference - (value / 100) * circumference;
 
   return (
+<<<<<<< HEAD
     <div className="flex flex-col items-center group cursor-pointer">
       <div className="relative">
         <svg width={size} height={size} className="-rotate-90">
@@ -42,16 +50,32 @@ function ProgressCircle({ value, label, size = 120 }: { value: number; label: st
       <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute -bottom-8 bg-card border border-border rounded-lg px-3 py-1.5 shadow-elevated text-xs text-muted-foreground whitespace-nowrap pointer-events-none">
         {value.toFixed(1)}% complete
       </div>
+=======
+    <div className="flex flex-col items-center">
+      <svg width={size} height={size} className="-rotate-90">
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="hsl(var(--muted))" strokeWidth={8} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="hsl(var(--primary))" strokeWidth={8}
+          strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round"
+          className="transition-all duration-700" />
+      </svg>
+      <div className="relative -mt-[calc(50%+12px)] flex flex-col items-center justify-center" style={{ height: size }}>
+        <span className="text-2xl font-bold font-display text-foreground">{value.toFixed(0)}%</span>
+      </div>
+      <p className="text-sm font-medium text-foreground mt-2">{label}</p>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
     </div>
   );
 }
 
+<<<<<<< HEAD
 function getBadge(avgProgress: number) {
   if (avgProgress >= 80) return { label: 'Advanced Learner', color: 'gradient-accent', icon: Award };
   if (avgProgress >= 50) return { label: 'Intermediate', color: 'gradient-primary', icon: TrendingUp };
   return null;
 }
 
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 export default function Dashboard() {
   const { user } = useAuth();
   const [domainProgress, setDomainProgress] = useState<DomainProgress[]>([]);
@@ -72,11 +96,15 @@ export default function Dashboard() {
 
       setRecentAttempts(attempts.slice(0, 5));
 
+<<<<<<< HEAD
       const { data: progressData } = await supabase
         .from('user_progress')
         .select('*')
         .eq('user_id', user!.id);
 
+=======
+      // Calculate domain progress
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
       const progress: DomainProgress[] = domains.map(domain => {
         const availableTopics = domain.topics.filter(t => t.available);
         const topicScores = availableTopics.map(topic => {
@@ -84,6 +112,7 @@ export default function Dashboard() {
           const bestPercentage = topicAttempts.length > 0
             ? Math.max(...topicAttempts.map(a => a.percentage))
             : 0;
+<<<<<<< HEAD
           const prog = progressData?.find(p => p.topic_name === topic.title);
           return {
             topic: topic.title,
@@ -91,6 +120,9 @@ export default function Dashboard() {
             bestScore: prog?.best_score || 0,
             lastScore: prog?.last_score || 0,
           };
+=======
+          return { topic: topic.title, percentage: bestPercentage };
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
         });
         const avg = topicScores.length > 0
           ? topicScores.reduce((s, t) => s + t.percentage, 0) / topicScores.length
@@ -105,11 +137,14 @@ export default function Dashboard() {
     fetchProgress();
   }, [user]);
 
+<<<<<<< HEAD
   const overallAvg = domainProgress.length > 0
     ? domainProgress.reduce((s, d) => s + d.progress, 0) / domainProgress.length
     : 0;
   const badge = getBadge(overallAvg);
 
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
   if (!user) {
     return (
       <AppLayout>
@@ -127,6 +162,7 @@ export default function Dashboard() {
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-12">
+<<<<<<< HEAD
         <div className="flex items-center justify-between mb-2">
           <h1 className="text-3xl font-bold font-display text-foreground">Dashboard</h1>
           {badge && (
@@ -140,6 +176,9 @@ export default function Dashboard() {
             </motion.div>
           )}
         </div>
+=======
+        <h1 className="text-3xl font-bold font-display mb-2 text-foreground">Dashboard</h1>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
         <p className="text-muted-foreground mb-10">Track your learning progress across all domains</p>
 
         {loading ? (
@@ -150,7 +189,11 @@ export default function Dashboard() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-14">
               {domainProgress.map((dp, i) => (
                 <motion.div key={dp.domain} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }}>
+<<<<<<< HEAD
                   <div className="bg-card border border-border rounded-xl p-6 shadow-card flex justify-center relative">
+=======
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-card flex justify-center">
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
                     <ProgressCircle value={dp.progress} label={dp.domain} />
                   </div>
                 </motion.div>
@@ -165,6 +208,7 @@ export default function Dashboard() {
                   <h3 className="font-bold text-foreground mb-3">{dp.domain}</h3>
                   <div className="space-y-2">
                     {dp.topicScores.map(ts => (
+<<<<<<< HEAD
                       <div key={ts.topic} className="flex items-center gap-3 group">
                         <span className="text-sm text-muted-foreground flex-1">{ts.topic}</span>
                         <div className="w-32 h-2 bg-muted rounded-full overflow-hidden">
@@ -185,6 +229,14 @@ export default function Dashboard() {
                             )}
                           </span>
                         )}
+=======
+                      <div key={ts.topic} className="flex items-center gap-3">
+                        <span className="text-sm text-muted-foreground flex-1">{ts.topic}</span>
+                        <div className="w-32 h-2 bg-muted rounded-full overflow-hidden">
+                          <div className="h-full gradient-primary rounded-full transition-all" style={{ width: `${ts.percentage}%` }} />
+                        </div>
+                        <span className="text-sm font-medium text-foreground w-12 text-right">{ts.percentage.toFixed(0)}%</span>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
                       </div>
                     ))}
                   </div>
@@ -212,7 +264,11 @@ export default function Dashboard() {
                   </thead>
                   <tbody>
                     {recentAttempts.map((a: any) => (
+<<<<<<< HEAD
                       <tr key={a.id} className="border-b border-border last:border-0 hover:bg-muted/30 transition-colors">
+=======
+                      <tr key={a.id} className="border-b border-border last:border-0">
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
                         <td className="p-3 text-foreground">{a.topic_name}</td>
                         <td className="p-3 text-muted-foreground">{a.domain_name}</td>
                         <td className="p-3 text-right text-foreground">{a.score}/{a.total_questions}</td>

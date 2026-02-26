@@ -1,5 +1,9 @@
 import { useState, useMemo, useCallback } from 'react';
+<<<<<<< HEAD
 import { SimulatorLayout } from '@/components/simulator/SimulatorLayout';
+=======
+import { AppLayout } from '@/components/layout/AppLayout';
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 
@@ -52,9 +56,16 @@ export default function KNNSim() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <SimulatorLayout topicId="knn" topicName="K-Nearest Neighbors">
       <h1 className="text-2xl font-bold font-display mb-1 text-foreground">K-Nearest Neighbors</h1>
       <p className="text-muted-foreground text-sm mb-6">Click on the chart to place a test point, then adjust K.</p>
+=======
+    <AppLayout>
+      <div className="container mx-auto px-4 py-8 max-w-5xl">
+        <h1 className="text-2xl font-bold font-display mb-1 text-foreground">K-Nearest Neighbors</h1>
+        <p className="text-muted-foreground text-sm mb-6">Click on the chart to place a test point, then adjust K.</p>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-card border border-border rounded-xl p-4">
@@ -117,7 +128,13 @@ export default function KNNSim() {
               <p>4. Majority vote</p>
             </div>
           </div>
+<<<<<<< HEAD
       </div>
     </SimulatorLayout>
+=======
+        </div>
+      </div>
+    </AppLayout>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
   );
 }

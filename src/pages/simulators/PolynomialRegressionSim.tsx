@@ -1,5 +1,9 @@
 import { useState, useMemo } from 'react';
+<<<<<<< HEAD
 import { SimulatorLayout } from '@/components/simulator/SimulatorLayout';
+=======
+import { AppLayout } from '@/components/layout/AppLayout';
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 import { Slider } from '@/components/ui/slider';
 import { ComposedChart, Scatter, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -77,9 +81,16 @@ export default function PolynomialRegressionSim() {
   }, [data, coeffs]);
 
   return (
+<<<<<<< HEAD
     <SimulatorLayout topicId="polynomial-regression" topicName="Polynomial Regression">
       <h1 className="text-2xl font-bold font-display mb-1 text-foreground">Polynomial Regression</h1>
       <p className="text-muted-foreground text-sm mb-6">Change the degree to see how curve complexity affects fitting.</p>
+=======
+    <AppLayout>
+      <div className="container mx-auto px-4 py-8 max-w-5xl">
+        <h1 className="text-2xl font-bold font-display mb-1 text-foreground">Polynomial Regression</h1>
+        <p className="text-muted-foreground text-sm mb-6">Change the degree to see how curve complexity affects fitting.</p>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-card border border-border rounded-xl p-4">
@@ -111,7 +122,13 @@ export default function PolynomialRegressionSim() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
       </div>
     </SimulatorLayout>
+=======
+        </div>
+      </div>
+    </AppLayout>
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
   );
 }

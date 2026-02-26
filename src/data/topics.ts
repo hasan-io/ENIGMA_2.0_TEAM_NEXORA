@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Layers, BarChart3, Zap, Wrench } from 'lucide-react';
+=======
+import { TrendingUp, Target, Layers, Gauge, BarChart3, Zap, Wrench } from 'lucide-react';
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
 export interface SimulationTopic {
   id: string;
@@ -29,6 +33,7 @@ export const domains: Domain[] = [
     topics: [
       { id: 'linear-regression', title: 'Linear Regression', description: 'Fit a line to data using least squares', domain: 'Models', category: 'Regression', available: true, route: '/simulations/linear-regression' },
       { id: 'polynomial-regression', title: 'Polynomial Regression', description: 'Fit polynomial curves to data', domain: 'Models', category: 'Regression', available: true, route: '/simulations/polynomial-regression' },
+<<<<<<< HEAD
       { id: 'lasso-regression', title: 'Lasso Regression', description: 'L1 regularization for feature selection', domain: 'Models', category: 'Regression', available: true, route: '/simulations/lasso-regression' },
       { id: 'ridge-regression', title: 'Ridge Regression', description: 'L2 regularization to prevent overfitting', domain: 'Models', category: 'Regression', available: true, route: '/simulations/ridge-regression' },
       { id: 'logistic-regression', title: 'Logistic Regression', description: 'Binary classification with sigmoid function', domain: 'Models', category: 'Classification', available: true, route: '/simulations/logistic-regression' },
@@ -36,6 +41,12 @@ export const domains: Domain[] = [
       { id: 'decision-tree', title: 'Decision Tree', description: 'Tree-based classification with Gini/Entropy', domain: 'Models', category: 'Classification', available: true, route: '/simulations/decision-tree' },
       { id: 'kmeans', title: 'K-Means Clustering', description: 'Partition data into K clusters', domain: 'Models', category: 'Clustering', available: true, route: '/simulations/kmeans' },
       { id: 'hierarchical-clustering', title: 'Hierarchical Clustering', description: 'Build dendrogram of nested clusters', domain: 'Models', category: 'Clustering', available: true, route: '/simulations/hierarchical-clustering' },
+=======
+      { id: 'logistic-regression', title: 'Logistic Regression', description: 'Binary classification with sigmoid function', domain: 'Models', category: 'Classification', available: true, route: '/simulations/logistic-regression' },
+      { id: 'knn', title: 'K-Nearest Neighbors', description: 'Classify points by nearest neighbor voting', domain: 'Models', category: 'Classification', available: true, route: '/simulations/knn' },
+      { id: 'kmeans', title: 'K-Means Clustering', description: 'Partition data into K clusters', domain: 'Models', category: 'Clustering', available: true, route: '/simulations/kmeans' },
+      { id: 'decision-tree', title: 'Decision Tree', description: 'Tree-based classification', domain: 'Models', category: 'Classification', available: false, route: '#' },
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
       { id: 'svm', title: 'Support Vector Machine', description: 'Maximum margin classifier', domain: 'Models', category: 'Classification', available: false, route: '#' },
       { id: 'naive-bayes', title: 'Naive Bayes', description: 'Probabilistic classification', domain: 'Models', category: 'Classification', available: false, route: '#' },
     ],
@@ -49,8 +60,11 @@ export const domains: Domain[] = [
     topics: [
       { id: 'confusion-matrix', title: 'Confusion Matrix', description: 'Visualize classification accuracy', domain: 'Evaluation', category: 'Metrics', available: true, route: '/simulations/confusion-matrix' },
       { id: 'roc-curve', title: 'ROC Curve', description: 'Trade-off between TPR and FPR', domain: 'Evaluation', category: 'Metrics', available: true, route: '/simulations/roc-curve' },
+<<<<<<< HEAD
       { id: 'precision-recall', title: 'Precision-Recall Curve', description: 'Precision vs recall tradeoff', domain: 'Evaluation', category: 'Metrics', available: true, route: '/simulations/precision-recall' },
       { id: 'learning-curves', title: 'Learning Curves', description: 'Diagnose underfitting vs overfitting', domain: 'Evaluation', category: 'Diagnostics', available: true, route: '/simulations/learning-curves' },
+=======
+>>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
       { id: 'cross-validation', title: 'Cross Validation', description: 'K-fold cross validation', domain: 'Evaluation', category: 'Techniques', available: false, route: '#' },
     ],
   },
