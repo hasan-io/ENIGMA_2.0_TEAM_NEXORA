@@ -1,15 +1,10 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-import { SimulatorLayout } from '@/components/simulator/SimulatorLayout';
-=======
 import { AppLayout } from '@/components/layout/AppLayout';
->>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 
 function generateData(n = 60) {
   const pts: { x: number; y: number }[] = [];
-  // 3 clusters
   const centers = [{ cx: 2, cy: 8 }, { cx: 8, cy: 2 }, { cx: 7, cy: 8 }];
   centers.forEach(c => {
     for (let i = 0; i < n / 3; i++) {
@@ -42,7 +37,8 @@ export default function KMeansSim() {
 
   const step = useCallback(() => {
     if (centroids.length === 0) return;
-    // Assign
+
+    // Assign points
     const newAssignments = data.map(p => {
       let minDist = Infinity, minIdx = 0;
       centroids.forEach((c, i) => {
@@ -53,7 +49,7 @@ export default function KMeansSim() {
     });
     setAssignments(newAssignments);
 
-    // Recalculate centroids
+    // Update centroids
     const newCentroids = centroids.map((_, i) => {
       const cluster = data.filter((_, j) => newAssignments[j] === i);
       if (cluster.length === 0) return centroids[i];
@@ -87,16 +83,10 @@ export default function KMeansSim() {
   const toSvgY = (y: number) => svgH - pad - (y / 10) * (svgH - 2 * pad);
 
   return (
-<<<<<<< HEAD
-    <SimulatorLayout topicId="kmeans" topicName="K-Means Clustering">
-      <h1 className="text-2xl font-bold font-display mb-1 text-foreground">K-Means Clustering</h1>
-      <p className="text-muted-foreground text-sm mb-6">Watch clusters form through iterative centroid updates.</p>
-=======
     <AppLayout>
       <div className="container mx-auto px-4 py-8 max-w-5xl">
         <h1 className="text-2xl font-bold font-display mb-1 text-foreground">K-Means Clustering</h1>
         <p className="text-muted-foreground text-sm mb-6">Watch clusters form through iterative centroid updates.</p>
->>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-card border border-border rounded-xl p-4">
@@ -135,13 +125,8 @@ export default function KMeansSim() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-      </div>
-    </SimulatorLayout>
-=======
         </div>
       </div>
     </AppLayout>
->>>>>>> 2e31993a8f50f3c24a0ea934fdf5039eb59ed03f
   );
 }
